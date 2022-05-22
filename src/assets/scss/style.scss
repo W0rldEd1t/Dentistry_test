@@ -1,552 +1,612 @@
 @import "fonts";
 body {
-    padding: 0;
-    margin: 0;
-    color: black;
-    font-size: 20px;
+	padding: 0;
+	margin: 0;
+	color: black;
+	font-size: 20px;
 }
 
 p {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 //(Color)-------------------------------------------------------------------------------------------
 :root {
-    --color1: #95FBAC;
-    --color2: #12AF2B;
-    --color3: #DEFFE5;
-    --color4: #FA5079;
-    --color5: #d34f6e;
-    --color6: #BF3858;
-    --color7: #6ED785;
-    --color8: #56c06d;
+	--color1: #95fbac;
+	--color2: #12af2b;
+	--color3: #deffe5;
+	--color4: #fa5079;
+	--color5: #d34f6e;
+	--color6: #bf3858;
+	--color7: #6ed785;
+	--color8: #56c06d;
 }
 
 //(Color)-------------------------------------------------------------------------------------------
 //(header)------------------------------------------------------------------------------------------
 header {
-    height: 280px;
-    background-color: var(--color1);
-    font-family: 'Montserrat';
+	background-color: var(--color1);
+	font-family: "Montserrat";
 }
 
 .header__container {
-    width: 1170px;
-    margin: 0 auto;
-    padding-top: 35px;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding-top: 35px;
 }
 
 .header__body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .brand__image {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .header__nav {
-    width: 635px;
+	width: 635px;
 }
 
 .nav__menu {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 li {
-    display: inline-block;
+	display: inline-block;
 }
 
 li a {
-    display: block;
-    text-decoration: none;
-    color: black;
+	display: block;
+	text-decoration: none;
+	color: black;
 }
 
 .nav__link {
-    font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 500;
+	position: relative;
+	font-family: "Montserrat";
 }
 
 .nav__link:hover {
-    color: black;
+	color: black;
 }
 
 .nav__link:hover:before {
-    transform: scaleX(1);
-    transition: transform 0.3s;
+	transform: scaleX(1);
+	transition: transform 0.3s;
 }
 
 .nav__link:before {
-    content: '';
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    transform: scaleX(0);
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: black;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transform: scaleX(0);
 }
 
 .header__run-times {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 32px;
-    font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 32px;
+	font-weight: 600;
 }
 
 .run-tims__number-phone {
-    display: flex;
+	display: flex;
 }
 
 //(header)-------------------------------------------------------------------------------------------
 //(why)-------------------------------------------------------------------------------------------
 .section-why {
-    height: 500px;
-    background-color: var(--color3);
-    font-family: 'Montserrat';
+	height: 500px;
+	background-color: var(--color3);
+	font-family: "Montserrat";
 }
 
 .section-why__container {
-    width: 970px;
-    margin: 0 auto;
-    // border: 1px solid black;
+	width: 970px;
+	margin: 0 auto;
+	// border: 1px solid black;
 }
 
 h1 {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .record__title {
-    width: 517px;
-    font-size: 35px;
+	width: 517px;
+	font-size: 35px;
 }
 
 .record__description {
-    width: 540px;
-    font-size: 20px;
-    padding-top: 30px;
-    margin-bottom: 60px;
+	width: 540px;
+	font-size: 20px;
+	padding-top: 30px;
+	margin-bottom: 60px;
 }
 
 .section-why__body {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 41px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 41px;
 }
 
 .section-why__record {
-    // margin-right: 83px;
-    padding-top: 45px;
+	// margin-right: 83px;
+	padding-top: 45px;
 }
 
 .record__title {
-    font-size: 35px;
-    font-weight: 700px;
+	font-size: 35px;
+	font-weight: 700px;
 }
 
 .record__btn {
-    color: white;
-    background: var(--color4);
-    font-size: 20;
-    font-weight: 600;
-    padding: 23px 15px;
-    text-decoration: none;
-    border-radius: 40px;
+	color: white;
+	background: var(--color4);
+	font-size: 20;
+	font-weight: 600;
+	padding: 23px 15px;
+	text-decoration: none;
+	border-radius: 40px;
 }
 
 .record__btn:hover {
-    background: var(--color5)
+	background: var(--color5);
 }
 
 .record__btn:active {
-    background: var(--color6)
+	background: var(--color6);
 }
 
 //(why)-------------------------------------------------------------------------------------------
 //(about)-------------------------------------------------------------------------------------------
 .section-about {
-    height: 520px;
-    background-color: var(--color1);
-    font-family: 'Montserrat';
+	height: 520px;
+	background-color: var(--color1);
+	font-family: "Montserrat";
 }
 
 .section-about__container {
-    width: 970px;
-    margin: 0 auto;
+	width: 970px;
+	margin: 0 auto;
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .section-about__body {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .about__desc {
-    width: 500px;
-    font-size: 24px;
+	width: 500px;
+	font-size: 24px;
 }
 
 .section-about__body {
-    padding-top: 82px;
+	padding-top: 82px;
 }
 
 .about__title {
-    font-size: 40px;
-    font-weight: 700px;
-    margin-bottom: 50px;
+	font-size: 40px;
+	font-weight: 700px;
+	margin-bottom: 50px;
 }
 
 //(about)-------------------------------------------------------------------------------------------
 //(specialists)-------------------------------------------------------------------------------------------
 .section-specialists {
-    height: 920px;
-    background-color: var(--color3);
-    font-family: 'Montserrat';
+	height: 920px;
+	background-color: var(--color3);
+	font-family: "Montserrat";
 }
 
 .section-specialists__container {
-    width: 970px;
-    margin: 0 auto;
+	width: 970px;
+	margin: 0 auto;
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.specialists__title {
-    display: flex;
-    justify-content: center;
-    padding-top: 51px;
-    padding-bottom: 51px;
-}
+.specialists {
+	&__title {
+		display: flex;
+		justify-content: center;
+		padding-top: 51px;
+		padding-bottom: 51px;
+	}
 
-.specialists__body {
-    display: flex;
-    justify-content: space-between;
-}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
 
-.specialists__card {
-    text-align: center;
-}
+	&__card {
+		text-align: center;
+	}
 
-.specialists__name {
-    font-size: 30px;
-    font-weight: 500;
-    padding-top: 13px;
-}
+	&__name {
+		font-size: 30px;
+		font-weight: 500;
+		padding-top: 13px;
+	}
 
-.specialists__speciality {
-    font-size: 18px;
-    font-weight: 400;
-    padding-top: 13px;
-}
+	&__speciality {
+		font-size: 18px;
+		font-weight: 400;
+		padding-top: 13px;
+	}
 
-.specialists__experience {
-    font-size: 20px;
-    font-weight: 500;
-    padding-top: 13px;
-}
+	&__experience {
+		font-size: 20px;
+		font-weight: 500;
+		padding-top: 13px;
+	}
 
-.specialists__category {
-    font-size: 20px;
-    font-weight: 500;
-    padding-top: 20px;
-}
+	&__category {
+		font-size: 20px;
+		font-weight: 500;
+		padding-top: 20px;
+	}
 
-.specialists__category {
-    padding-bottom: 34px;
-}
+	&__category {
+		padding-bottom: 34px;
+	}
 
-.specialists__btn {
-    color: white;
-    background: var(--color7);
-    padding: 10px 72px;
-    text-decoration: none;
-    border-radius: 40px;
-    border: none;
-    width: 250px;
-    height: 44px;
-    font-size: 20;
-    font-weight: 600;
-}
+	&__btn {
+		color: white;
+		background: var(--color7);
+		padding: 10px 72px;
+		text-decoration: none;
+		border-radius: 40px;
+		border: none;
+		width: 250px;
+		height: 44px;
+		font-size: 20;
+		font-weight: 600;
 
-.specialists__btn:hover {
-    background: var(--color8)
+		&:hover {
+			background: var(--color8);
+		}
+	}
 }
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    visibility: hidden;
-    z-index: -1;
-    opacity: 0;
-    transition: all .09s ease-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.09s ease-out;
 }
 
 .modal.show {
-    visibility: visible;
-    z-index: 100;
-    opacity: 1;
+	visibility: visible;
+	z-index: 100;
+	opacity: 1;
 }
 
 .modal .modal__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.7;
-    z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.7;
+	z-index: 0;
 }
 
 .modal__window {
-    position: relative;
-    z-index: 2;
-    width: 1140px;
-    height: 660px;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
-    background-color: white;
-    padding: 30px;
-    display: flex;
-    padding-top: 50px;
+	position: relative;
+	z-index: 2;
+	width: 1140px;
+	height: 660px;
+	border-radius: 10px;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+	background-color: white;
+	padding: 30px;
+	display: flex;
+	padding-top: 50px;
 }
 
 .modal__btn-close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    border: none;
-    background: none;
-    opacity: 0.7;
-    font-size: 27px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	border: none;
+	background: none;
+	opacity: 0.7;
+	font-size: 27px;
 }
 
 .modal__btn-close:hover {
-    border: none;
-    background: none;
-    opacity: 1;
-    font-size: 27px;
+	border: none;
+	background: none;
+	opacity: 1;
+	font-size: 27px;
 }
 
 .modal__window-body {
-    padding-right: 80px;
-    padding-left: 50px;
-    text-align: center;
+	padding-right: 80px;
+	padding-left: 50px;
+	text-align: center;
 }
 
 .modal__title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 10px;
 }
 
 .modal__description {
-    font-size: 15px;
-    font-weight: 400;
-    margin-bottom: 20px;
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 20px;
 }
 
 //(specialists)-------------------------------------------------------------------------------------------
 //(record)-------------------------------------------------------------------------------------------
 .section-record {
-    height: 580px;
-    background-color: var(--color1);
-    font-family: 'Montserrat';
+	background-color: var(--color1);
+	font-family: "Montserrat";
 }
 
 .section-record__container {
-    width: 1170px;
-    margin: 0 auto;
+	max-width: 1170px;
+	margin: 0 auto;
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .record__title-main {
-    display: flex;
-    justify-content: center;
-    padding-top: 51px;
-    padding-bottom: 51px;
+	display: flex;
+	justify-content: center;
+	padding-top: 51px;
+	padding-bottom: 51px;
 }
 
 .record__main-info {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .record__secondary-info {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+}
+
+.record__fields {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px 30px;
+	justify-content: center;
 }
 
 .record__checkbox {
-    justify-content: center;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+
+	& + label {
+		display: inline-flex;
+		user-select: none;
+	}
+	& + label::before {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		flex-shrink: 0;
+		flex-grow: 0;
+		border: 1px solid #adb5bd;
+		border-radius: 0.25em;
+		margin-right: 0.5em;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 50% 50%;
+
+		transition: all ease 0.2s;
+
+		background-color: white;
+	}
+
+	&:checked + label::before {
+		border-color: var(--color4);
+		background-color: var(--color4);
+		background-image: url("data:image/jpeg;base64,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");
+	}
+
+	/* стили при наведении курсора на checkbox */
+	&:not(:disabled):not(:checked) + label:hover::before {
+		border-color: #b3d7ff;
+	}
+	/* стили для активного состояния чекбокса (при нажатии на него) */
+	&:not(:disabled):active + label::before {
+		background-color: #b3d7ff;
+		border-color: #b3d7ff;
+	}
+
+	/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+	&:focus:not(:checked) + label::before {
+		border-color: #80bdff;
+	}
+	/* стили для чекбокса, находящегося в состоянии disabled */
+	&:disabled + label::before {
+		background-color: #e9ecef;
+	}
 }
 
 .record__submit {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .record__form input[type="text"],
 .record__form input[type="tel"],
 .record__form select {
-    background: white;
-    width: 320px;
-    height: 63px;
-    border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0 30px;
-    text-align: left;
-    box-sizing: border-box;
-    padding-left: 15px;
+	background: white;
+	width: 320px;
+	height: 63px;
+	border-radius: 15px;
+	border: none;
+	font-size: 20px;
+	font-weight: 500;
+	text-align: left;
+	box-sizing: border-box;
+	padding-left: 15px;
 }
 
-.record__checed input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-top: 42px;
-    margin-left: 85px;
-    margin-bottom: 40px;
+.record__checed {
+	margin: 42px auto 40px;
+	max-width: 670px;
 }
 
 .record__secondary-info {
-    margin-top: 50px;
+	margin-top: 50px;
 }
 
 .record__btn-main {
-    color: white;
-    background: var(--color4);
-    padding: 23px 15px;
-    text-decoration: none;
-    border-radius: 40px;
-    width: 270px;
-    height: 69px;
-    border: none;
-    font-size: 20px;
-    font-weight: 600;
+	color: white;
+	background: var(--color4);
+	padding: 23px 15px;
+	text-decoration: none;
+	border-radius: 40px;
+	width: 270px;
+	height: 69px;
+	border: none;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .record__btn-main:hover {
-    background: var(--color5)
+	background: var(--color5);
 }
 
 .record__btn-main:active {
-    background: var(--color6)
+	background: var(--color6);
 }
 
 //(record)-------------------------------------------------------------------------------------------
 //(location)-------------------------------------------------------------------------------------------
 .section-location {
-    height: 580px;
-    background-color: var(--color3);
-    font-family: 'Montserrat';
-}
+	height: 580px;
+	background-color: var(--color3);
+	font-family: "Montserrat";
 
-.section-location__container {
-    width: 1920px;
-    margin: 0 auto;
+	&__container {
+		max-width: 1600px;
+		margin: 0 auto;
+	}
 }
 
 h2 {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .section-location__location {
-    display: flex;
+	display: flex;
+	justify-content: space-between;
 }
 
 .map {
-    width: 1350px;
-    height: 580px;
-    background-color: white;
+	width: 68.75vw;
+	max-width: 1100px;
+	height: 580px;
+	background-color: white;
 }
 
 .location__address {
-    width: 292px;
-    height: 118px;
-    font-size: 25px;
-    font-weight: 500;
+	font-size: 25px;
+	font-weight: 500;
 }
 
 .location__number-phone {
-    display: flex;
-    padding-left: 20px;
+	display: flex;
+	padding-left: 20px;
 }
 
 .location__icon {
-    padding-left: 60px;
-    margin-bottom: 45px;
+	width: 110px;
+	margin: 0 auto;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
 }
 
 .location__description {
-    padding-top: 135px;
-    padding-left: 170px;
+	padding: 150px 10px 0;
+	width: 25%;
+	max-width: 292px;
 }
 
 [class*="copyrights-pane"] {
-    display: none !important;
+	display: none !important;
 }
 
 //(location)-------------------------------------------------------------------------------------------
 //(footer)-------------------------------------------------------------------------------------------
 .footer {
-    height: 280px;
-    background-color: var(--color7);
-    font-family: 'Montserrat';
+	height: 280px;
+	background-color: var(--color7);
+	font-family: "Montserrat";
 }
 
 .footer__container {
-    width: 1170px;
-    margin: 0 auto;
+	max-width: 1170px;
+	margin: 0 auto;
 }
 
 .footer__description {
-    width: 373px;
-    height: 69px;
-    font-weight: 600;
+	width: 373px;
+	height: 69px;
+	font-weight: 600;
 }
 
 .footer__body {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 43px;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 43px;
 }
 
 .footer-warnig {
-    width: 284px;
-    height: 183px;
-    font-size: 14px;
-    font-weight: 400;
+	width: 284px;
+	height: 183px;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 //(footer)-------------------------------------------------------------------------------------------
