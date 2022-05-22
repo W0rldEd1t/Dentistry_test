@@ -1,9 +1,9 @@
-const select_fonts = ["OpenSans"]; //Используемые шрифты
+const select_fonts = ["Montserrat"]; //Используемые шрифты
 const path = {
 	src: {
 		css: ["src/assets/scss/style.scss"], //Стили
 		js: ["src/assets/js/scripts.js"], //Скрипты
-		fonts: "src/assets/fonts", //Путь до шрифтов
+		fonts: "src/assets/fonts/", //Путь до шрифтов
 		assets_images: "src/assets/images/*",
 		images: "src/img/*", //Путь до шрифтов
 		html: ["src/**/*.html", "!src/**/_*.html"], //Путь до html файлов
@@ -54,7 +54,7 @@ function build_fonts_style() {
 
 	let c_fontsource;
 	for (let i = 0; i < select_fonts.length; i++) {
-		files = fs.readdirSync(path.src.fonts + "/" + select_fonts[i] + "/");
+		files = fs.readdirSync(path.src.fonts + select_fonts[i] + "/");
 
 		for (var j = 0; j < files.length; j++) {
 			let fontname = files[j].split("-")[0];
@@ -145,7 +145,9 @@ function build_html() {
 
 //Собрать шрифты
 function build_fonts() {
-	return src(path.src.fonts).pipe(dest(path.dist.fonts)).pipe(browsersync.stream());
+	return src(path.src.fonts + "*")
+		.pipe(dest(path.dist.fonts))
+		.pipe(browsersync.stream());
 }
 
 //Собрать изображения
