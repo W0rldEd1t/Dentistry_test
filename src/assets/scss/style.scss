@@ -1,9 +1,4 @@
 @import "fonts";
-// // html {
-// //     background-color: wheat;
-// // }
-// // .block { 
-// }
 body {
     padding: 0;
     margin: 0;
@@ -24,6 +19,8 @@ p {
     --color4: #FA5079;
     --color5: #d34f6e;
     --color6: #BF3858;
+    --color7: #6ED785;
+    --color8: #56c06d;
 }
 
 //(Color)-------------------------------------------------------------------------------------------
@@ -31,6 +28,7 @@ p {
 header {
     height: 280px;
     background-color: var(--color1);
+    font-family: 'Montserrat';
 }
 
 .header__container {
@@ -45,6 +43,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.brand__image {
+    width: 100%;
+    height: 100%;
 }
 
 .header__nav {
@@ -68,8 +71,9 @@ li a {
 
 .nav__link {
     font-size: 18px;
-    font-weight: 500px;
+    font-weight: 500;
     position: relative;
+    font-family: 'Montserrat';
 }
 
 .nav__link:hover {
@@ -97,17 +101,23 @@ li a {
     align-items: center;
     justify-content: space-between;
     margin-top: 32px;
+    font-weight: 600;
+}
+
+.run-tims__number-phone {
+    display: flex;
 }
 
 //(header)-------------------------------------------------------------------------------------------
-//(section1)-------------------------------------------------------------------------------------------
-.section1 {
+//(why)-------------------------------------------------------------------------------------------
+.section-why {
     height: 500px;
     background-color: var(--color3);
+    font-family: 'Montserrat';
 }
 
-.section1__container {
-    width: 1170px;
+.section-why__container {
+    width: 970px;
     margin: 0 auto;
     // border: 1px solid black;
 }
@@ -122,22 +132,22 @@ h1 {
     font-size: 35px;
 }
 
-.record__recommendation {
+.record__description {
     width: 540px;
     font-size: 20px;
     padding-top: 30px;
     margin-bottom: 60px;
 }
 
-.section1__body {
+.section-why__body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-top: 41px;
 }
 
-.section1__record {
-    margin-right: 83px;
-    padding-top: 74px;
+.section-why__record {
+    // margin-right: 83px;
+    padding-top: 45px;
 }
 
 .record__title {
@@ -163,15 +173,16 @@ h1 {
     background: var(--color6)
 }
 
-//(section1)-------------------------------------------------------------------------------------------
-//(section2)-------------------------------------------------------------------------------------------
-.section2 {
+//(why)-------------------------------------------------------------------------------------------
+//(about)-------------------------------------------------------------------------------------------
+.section-about {
     height: 520px;
     background-color: var(--color1);
+    font-family: 'Montserrat';
 }
 
-.section2__container {
-    width: 1170px;
+.section-about__container {
+    width: 970px;
     margin: 0 auto;
 }
 
@@ -180,17 +191,17 @@ h2 {
     padding: 0;
 }
 
-.section2__body {
+.section-about__body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.about_desc {
+.about__desc {
     width: 500px;
     font-size: 24px;
 }
 
-.section2__body {
+.section-about__body {
     padding-top: 82px;
 }
 
@@ -200,4 +211,342 @@ h2 {
     margin-bottom: 50px;
 }
 
-//(section2)-------------------------------------------------------------------------------------------
+//(about)-------------------------------------------------------------------------------------------
+//(specialists)-------------------------------------------------------------------------------------------
+.section-specialists {
+    height: 920px;
+    background-color: var(--color3);
+    font-family: 'Montserrat';
+}
+
+.section-specialists__container {
+    width: 970px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.specialists__title {
+    display: flex;
+    justify-content: center;
+    padding-top: 51px;
+    padding-bottom: 51px;
+}
+
+.specialists__body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.specialists__card {
+    text-align: center;
+}
+
+.specialists__name {
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 13px;
+}
+
+.specialists__speciality {
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 13px;
+}
+
+.specialists__experience {
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 13px;
+}
+
+.specialists__category {
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.specialists__category {
+    padding-bottom: 34px;
+}
+
+.specialists__btn {
+    color: white;
+    background: var(--color7);
+    padding: 10px 72px;
+    text-decoration: none;
+    border-radius: 40px;
+    border: none;
+    width: 250px;
+    height: 44px;
+    font-size: 20;
+    font-weight: 600;
+}
+
+.specialists__btn:hover {
+    background: var(--color8)
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: -1;
+    opacity: 0;
+    transition: all .09s ease-out;
+}
+
+.modal.show {
+    visibility: visible;
+    z-index: 100;
+    opacity: 1;
+}
+
+.modal .modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.modal__window {
+    position: relative;
+    z-index: 2;
+    width: 1140px;
+    height: 660px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .4);
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    padding-top: 50px;
+}
+
+.modal__btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: none;
+    opacity: 0.7;
+    font-size: 27px;
+}
+
+.modal__btn-close:hover {
+    border: none;
+    background: none;
+    opacity: 1;
+    font-size: 27px;
+}
+
+.modal__window-body {
+    padding-right: 80px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.modal__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.modal__description {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+//(specialists)-------------------------------------------------------------------------------------------
+//(record)-------------------------------------------------------------------------------------------
+.section-record {
+    height: 580px;
+    background-color: var(--color1);
+    font-family: 'Montserrat';
+}
+
+.section-record__container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.record__title-main {
+    display: flex;
+    justify-content: center;
+    padding-top: 51px;
+    padding-bottom: 51px;
+}
+
+.record__main-info {
+    display: flex;
+    justify-content: center;
+}
+
+.record__secondary-info {
+    display: flex;
+    justify-content: center;
+}
+
+.record__checkbox {
+    justify-content: center;
+}
+
+.record__submit {
+    display: flex;
+    justify-content: center;
+}
+
+.record__form input[type="text"],
+.record__form input[type="tel"],
+.record__form select {
+    background: white;
+    width: 320px;
+    height: 63px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 30px;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+
+.record__checed input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 42px;
+    margin-left: 85px;
+    margin-bottom: 40px;
+}
+
+.record__secondary-info {
+    margin-top: 50px;
+}
+
+.record__btn-main {
+    color: white;
+    background: var(--color4);
+    padding: 23px 15px;
+    text-decoration: none;
+    border-radius: 40px;
+    width: 270px;
+    height: 69px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.record__btn-main:hover {
+    background: var(--color5)
+}
+
+.record__btn-main:active {
+    background: var(--color6)
+}
+
+//(record)-------------------------------------------------------------------------------------------
+//(location)-------------------------------------------------------------------------------------------
+.section-location {
+    height: 580px;
+    background-color: var(--color3);
+    font-family: 'Montserrat';
+}
+
+.section-location__container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.section-location__location {
+    display: flex;
+}
+
+.map {
+    width: 1350px;
+    height: 580px;
+    background-color: white;
+}
+
+.location__address {
+    width: 292px;
+    height: 118px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.location__number-phone {
+    display: flex;
+    padding-left: 20px;
+}
+
+.location__icon {
+    padding-left: 60px;
+    margin-bottom: 45px;
+}
+
+.location__description {
+    padding-top: 135px;
+    padding-left: 170px;
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+//(location)-------------------------------------------------------------------------------------------
+//(footer)-------------------------------------------------------------------------------------------
+.footer {
+    height: 280px;
+    background-color: var(--color7);
+    font-family: 'Montserrat';
+}
+
+.footer__container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.footer__description {
+    width: 373px;
+    height: 69px;
+    font-weight: 600;
+}
+
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+}
+
+.footer-warnig {
+    width: 284px;
+    height: 183px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+//(footer)-------------------------------------------------------------------------------------------

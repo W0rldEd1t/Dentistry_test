@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoDentPlas</title>
     <link rel="stylesheet" href="assets/css/style.min.css">
-    <!-- <link rel="stylesheet" href="assets/img/brands"> -->
 </head>
 
 <body>
 
-    __include('_header.html') __include('_section1.html') __include('_section2.html')
+    __include('_header.html') __include('_section-why.html') __include('_section-about.html') __include('_section-specialists.html') __include('_section-record.html') __include('_section-location.html') __include('_footer.html')
 
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4823c6b2-adf8-4f53-a066-5f4ffb6fba07&lang=ru_RU" type="text/javascript"></script>
     <script src="assets/js/scripts.min.js"></script>
+
+    <script>
+        function init() {
+            let map = new ymaps.Map('map', {
+                center: [53.75866313944923, 87.12497474689887],
+                zoom: 17,
+            })
+
+            let placemark = new ymaps.Placemark([53.75866313944923, 87.12497474689887], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: 'https://cdn-icons-png.flaticon.com/512/58/58960.png',
+                iconImageSize: [40, 40],
+                iconImageOffset: [-20, -40]
+
+            });
+
+            map.controls.remove('geolocationControl'); // удаляем геолокацию
+            map.controls.remove('searchControl'); // удаляем поиск
+            map.controls.remove('trafficControl'); // удаляем контроль трафика
+            map.controls.remove('typeSelector'); // удаляем тип
+            map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+            map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+            map.controls.remove('rulerControl'); // удаляем контрол правил
+            // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+            map.geoObjects.add(placemark);
+        }
+
+        ymaps.ready(init);
+    </script>
+
+    <script>
+        const anchors = document.querySelectorAll('a[href*="#"]')
+
+        for (let anchor of anchors) {
+            anchor.addEventListener("click", function(event) {
+                event.preventDefault();
+                const blockID = anchor.getAttribute('href')
+                document.querySelector('' + blockID).scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                })
+            })
+        }
+    </script>
+
+    <script>
+        /**
+         * EasyToggler 1.2.0
+         * Simple class switcher on web elements. JavaScript only.
+         * GitHub: https://github.com/rah-emil/easy-toggler
+         *
+         * Copyright 2020 Rah Emil
+         *
+         * Released under the MIT License
+         *
+         * Released: July 21, 2020
+         * Latest updates: July 21, 2021
+         */
+
+        ! function() {
+            "use strict";
+            document.addEventListener("click", function(t) {
+                const e = t.target.closest("[data-easy-toggle]");
+                if (e) {
+                    t.preventDefault();
+                    let a = e.getAttribute("data-easy-toggle"),
+                        s = e.getAttribute("data-easy-class");
+                    try {
+                        document.querySelectorAll("[data-easy-toggle]").forEach(t => {
+                            t.hasAttribute("data-easy-parallel") || t === e || document.querySelector(t.getAttribute("data-easy-toggle")).classList.remove(t.getAttribute("data-easy-class"))
+                        }), document.querySelector(a).classList.toggle(s)
+                    } catch (t) {
+                        console.warn("EasyToggler.js : Блок " + a + " не существует")
+                    }
+                }
+                if (!e) {
+                    let e = document.querySelectorAll("[data-easy-rcoe]");
+                    Array.from(e).forEach.call(e, function(e) {
+                        let a = e.getAttribute("data-easy-toggle"),
+                            s = e.getAttribute("data-easy-class");
+                        if (!t.target.closest(a)) try {
+                            document.querySelector(a).classList.remove(s)
+                        } catch (t) {
+                            console.warn("EasyToggler.js : Блок " + a + " не существует")
+                        }
+                    })
+                }
+            })
+        }();
+    </script>
+
 </body>
 
 </html>

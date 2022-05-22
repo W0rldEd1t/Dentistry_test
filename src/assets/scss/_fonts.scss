@@ -9,12 +9,8 @@ url('../fonts/'+ $fontname + '/' + $fontsource +'.woff') format('woff'),
 url('../fonts/'+ $fontname + '/' + $fontsource +'.ttf') format('truetype');
 }
 }
-@include font('OpenSans', 'OpenSans-Bold', 700, normal);
-@include font('OpenSans', 'OpenSans-BoldItalic', 700, italic);
-@include font('OpenSans', 'OpenSans-ExtraBold', 800, normal);
-@include font('OpenSans', 'OpenSans-Italic', 400, italic);
-@include font('OpenSans', 'OpenSans-Light', 300, normal);
-@include font('OpenSans', 'OpenSans-LightItalic', 300, italic);
-@include font('OpenSans', 'OpenSans-Regular', 400, normal);
-@include font('OpenSans', 'OpenSans-SemiBold', 600, normal);
-@include font('OpenSans', 'OpenSans-SemiBoldItalic', 600, italic);
+@include font('Montserrat', 'Montserrat-Bold', 700, normal);
+@include font('Montserrat', 'Montserrat-ExtraBold', 800, normal);
+@include font('Montserrat', 'Montserrat-Medium', 500, normal);
+@include font('Montserrat', 'Montserrat-Regular', 400, normal);
+@include font('Montserrat', 'Montserrat-SemiBold', 600, normal);
