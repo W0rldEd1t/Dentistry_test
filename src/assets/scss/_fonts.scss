@@ -1,0 +1,20 @@
+@mixin font($fontname, $fontsource, $fontweight, $fontstyle) {
+@font-face {
+font-family: $fontname;
+font-style: $fontstyle;
+font-weight: $fontweight;
+src: local($fontname),
+url('../fonts/'+ $fontname + '/' + $fontsource +'.woff2') format('woff2'),
+url('../fonts/'+ $fontname + '/' + $fontsource +'.woff') format('woff'),
+url('../fonts/'+ $fontname + '/' + $fontsource +'.ttf') format('truetype');
+}
+}
+@include font('OpenSans', 'OpenSans-Bold', 700, normal);
+@include font('OpenSans', 'OpenSans-BoldItalic', 700, italic);
+@include font('OpenSans', 'OpenSans-ExtraBold', 800, normal);
+@include font('OpenSans', 'OpenSans-Italic', 400, italic);
+@include font('OpenSans', 'OpenSans-Light', 300, normal);
+@include font('OpenSans', 'OpenSans-LightItalic', 300, italic);
+@include font('OpenSans', 'OpenSans-Regular', 400, normal);
+@include font('OpenSans', 'OpenSans-SemiBold', 600, normal);
+@include font('OpenSans', 'OpenSans-SemiBoldItalic', 600, italic);
