@@ -135,7 +135,7 @@ function build_html() {
     return src(path.src.html) //Найти стили
         .pipe(
             fileinclude({
-                prefix: "__",
+                prefix: "@@",
                 basepath: "@file",
             })
         )

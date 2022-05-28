@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
-<body>
+<body class="page">
 
-    __include('_header.html') __include('_section-why.html') __include('_section-about.html') __include('_section-specialists.html') __include('_section-record.html') __include('_section-location.html') __include('_footer.html')
+    @@include('_header.html') @@include('_section-why.html') @@include('_section-about.html') @@include('_section-specialists.html') @@include('_section-record.html') @@include('_section-location.html') @@include('_footer.html')
 
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=4823c6b2-adf8-4f53-a066-5f4ffb6fba07&lang=ru_RU" type="text/javascript"></script>
@@ -51,7 +51,7 @@
         const anchors = document.querySelectorAll('a[href*="#"]')
 
         for (let anchor of anchors) {
-            anchor.addEventListener("click", function(event) {
+            anchor.addEventListener("click", function (event) {
                 event.preventDefault();
                 const blockID = anchor.getAttribute('href')
                 document.querySelector('' + blockID).scrollIntoView({
@@ -76,9 +76,9 @@
          * Latest updates: July 21, 2021
          */
 
-        ! function() {
+        ! function () {
             "use strict";
-            document.addEventListener("click", function(t) {
+            document.addEventListener("click", function (t) {
                 const e = t.target.closest("[data-easy-toggle]");
                 if (e) {
                     t.preventDefault();
@@ -94,7 +94,7 @@
                 }
                 if (!e) {
                     let e = document.querySelectorAll("[data-easy-rcoe]");
-                    Array.from(e).forEach.call(e, function(e) {
+                    Array.from(e).forEach.call(e, function (e) {
                         let a = e.getAttribute("data-easy-toggle"),
                             s = e.getAttribute("data-easy-class");
                         if (!t.target.closest(a)) try {
