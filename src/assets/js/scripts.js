@@ -1,2 +1,2 @@
-// _\_include("location.js");
-// // _\_include("ymap.js");
+__include("location.js");
+__include("ymap.js");
