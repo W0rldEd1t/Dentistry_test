@@ -1,11 +1,11 @@
 const select_fonts = ["Montserrat"]; //Используемые шрифты
 const path = {
     src: {
-        css: ["src/assets/libs/toastr-2.1.4/toastr.min.css", "src/assets/scss/style.scss"], //Стили
-        js: ["src/assets/libs/jquery-3.6.0/jquery.min.js", "src/assets/libs/toastr-2.1.4/toastr.min.js", "src/assets/libs/inputmask-5.0.7/inputmask.min.js", "src/assets/js/scripts.js"], //Скрипты
+        css: ["src/assets/scss/style.scss"], //Стили
+        js: ["src/assets/js/scripts.js"], //Скрипты
         fonts: "src/assets/fonts/", //Путь до шрифтов
-        assets_images: "src/assets/images/*",
-        images: "src/img/*", //Путь до шрифтов
+        assets_images: "src/assets/images/**/*",
+        images: "src/img/**/*", //Путь до шрифтов
         html: ["src/**/*.html", "!src/**/_*.html"], //Путь до html файлов
     }, //Пути до исходных файлов
     dist: {
@@ -13,7 +13,7 @@ const path = {
         css: "dist/assets/css",
         fonts: "dist/assets/fonts",
         assets_images: "dist/assets/images",
-        images: "dist/img",
+        images: "dist/img/",
         html: "dist/",
     },
     watch: {
