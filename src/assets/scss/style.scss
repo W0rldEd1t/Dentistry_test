@@ -2,7 +2,7 @@
 @import "fonts";
 @import "null.scss";
 
-.page {
+~ .page {
 	padding: 0;
 	margin: 0;
 	color: black;
@@ -431,7 +431,9 @@ li a {
 	}
 
 	&__image-wrapper {
-		img {
+		overflow: hidden;
+		border-radius: 30px;
+		~ img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;

@@ -1,2 +1,3 @@
-__include("location.js");
-__include("ymap.js");
+__include("jquery.min.js");
+__include("toastr.min.js");
+__include("jquery.inputmask.min.js");
